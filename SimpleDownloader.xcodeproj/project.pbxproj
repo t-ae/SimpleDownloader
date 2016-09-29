@@ -1,0 +1,220 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 46;
+    rootObject = __RootObject_;
+    objects = {
+        __RootObject_ = {
+            isa = PBXProject;
+            attributes = {LastUpgradeCheck = 9999;};
+            buildConfigurationList = ___RootConfs_;
+            compatibilityVersion = 'Xcode 3.2';
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (en);
+            mainGroup = ___RootGroup_;
+            productRefGroup = ____Products_;
+            projectDirPath = '';
+            projectRoot = '';
+            targets = (______Target_SimpleDownloader, ______Target_SimpleDownloaderTests);
+        };
+        '__PBXFileRef_Package.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'Package.swift';
+            sourceTree = '<group>';
+        };
+        ___RootGroup_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_,  Dependencies_, _______Tests_, ____Products_);
+            sourceTree = '<group>';
+        };
+        _______Group_SimpleDownloader = {
+            isa = PBXGroup;
+            name = 'SimpleDownloader';
+            path = 'Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Sources/SimpleDownloader.swift');
+        };
+        '__PBXFileRef_Sources/SimpleDownloader.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'SimpleDownloader.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_SimpleDownloader = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_SimpleDownloader;
+            buildPhases = (CompilePhase_SimpleDownloader, ___LinkPhase_SimpleDownloader);
+            buildRules = ();
+            dependencies = ();
+            name = 'SimpleDownloader';
+            productName = SimpleDownloader;
+            productReference = _____Product_SimpleDownloader;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_SimpleDownloader = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'SimpleDownloader.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_SimpleDownloader = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Sources/SimpleDownloader.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Sources/SimpleDownloader.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/SimpleDownloader.swift';
+        };
+        ___LinkPhase_SimpleDownloader = {
+            isa = PBXFrameworksBuildPhase;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _______Confs_SimpleDownloader = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_SimpleDownloader, _ReleaseConf_SimpleDownloader);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_SimpleDownloader = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'SimpleDownloader.xcodeproj/SimpleDownloader_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; PRODUCT_BUNDLE_IDENTIFIER = 'SimpleDownloader'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Debug;
+        };
+        _ReleaseConf_SimpleDownloader = {
+            isa = XCBuildConfiguration;
+            buildSettings = { SWIFT_VERSION = '3.0'; LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'SimpleDownloader.xcodeproj/SimpleDownloader_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; PRODUCT_BUNDLE_IDENTIFIER = 'SimpleDownloader'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; OTHER_LDFLAGS = '$(inherited)'; };
+            name = Release;
+        };
+        __Dependency_SimpleDownloader = {
+            isa = PBXTargetDependency;
+            target = ______Target_SimpleDownloader;
+        };
+        _______Group_SimpleDownloaderTests = {
+            isa = PBXGroup;
+            name = 'SimpleDownloaderTests';
+            path = 'Tests/SimpleDownloaderTests';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift');
+        };
+        '__PBXFileRef_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            path = 'SimpleDownloaderTests.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_SimpleDownloaderTests = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_SimpleDownloaderTests;
+            buildPhases = (CompilePhase_SimpleDownloaderTests, ___LinkPhase_SimpleDownloaderTests);
+            buildRules = ();
+            dependencies = (__Dependency_SimpleDownloader);
+            name = 'SimpleDownloaderTests';
+            productName = SimpleDownloaderTests;
+            productReference = _____Product_SimpleDownloaderTests;
+            productType = 'com.apple.product-type.bundle.unit-test';
+        };
+        _____Product_SimpleDownloaderTests = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.wrapper.cfbundle';
+            path = 'SimpleDownloaderTests.xctest';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_SimpleDownloaderTests = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift';
+        };
+        ___LinkPhase_SimpleDownloaderTests = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_SimpleDownloader_via_SimpleDownloaderTests);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_SimpleDownloader_via_SimpleDownloaderTests = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_SimpleDownloader;
+        };
+        _______Confs_SimpleDownloaderTests = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_SimpleDownloaderTests, _ReleaseConf_SimpleDownloaderTests);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_SimpleDownloaderTests = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'SimpleDownloader.xcodeproj/SimpleDownloaderTests_Info.plist'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; SWIFT_VERSION = '3.0'; };
+            name = Debug;
+        };
+        _ReleaseConf_SimpleDownloaderTests = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '@loader_path/../Frameworks'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'SimpleDownloader.xcodeproj/SimpleDownloaderTests_Info.plist'; EMBEDDED_CONTENT_CONTAINS_SWIFT = 'YES'; OTHER_LDFLAGS = '$(inherited)'; SWIFT_VERSION = '3.0'; };
+            name = Release;
+        };
+        __Dependency_SimpleDownloaderTests = {
+            isa = PBXTargetDependency;
+            target = ______Target_SimpleDownloaderTests;
+        };
+        '__PBXFileRef_SimpleDownloader.xcodeproj/Configs/Project.xcconfig' = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.xcconfig;
+            path = 'SimpleDownloader.xcodeproj/Configs/Project.xcconfig';
+            sourceTree = '<group>';
+        };
+        _____Configs_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_SimpleDownloader.xcodeproj/Configs/Project.xcconfig');
+            name = Configs;
+            sourceTree = '<group>';
+        };
+        _____Sources_ = {
+            isa = PBXGroup;
+            children = (_______Group_SimpleDownloader);
+            name = Sources;
+            sourceTree = '<group>';
+        };
+        _______Tests_ = {
+            isa = PBXGroup;
+            children = (_______Group_SimpleDownloaderTests);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+       TestProducts_ = {
+            isa = PBXGroup;
+            children = (_____Product_SimpleDownloaderTests);
+            name = Tests;
+            sourceTree = '<group>';
+        };
+        ____Products_ = {
+            isa = PBXGroup;
+            children = (TestProducts_, _____Product_SimpleDownloader);
+            name = Products;
+            sourceTree = '<group>';
+        };
+        _______Debug_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_SimpleDownloader.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Debug;
+        };
+        _____Release_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_SimpleDownloader.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Release;
+        };
+        ___RootConfs_ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (_______Debug_, _____Release_);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+    };
+}
