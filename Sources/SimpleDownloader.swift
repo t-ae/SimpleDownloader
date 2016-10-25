@@ -10,7 +10,7 @@ class SimpleDownloader: NSObject {
     private var session: URLSession!
     private var task: URLSessionDownloadTask!
     
-    init(url: URL) {
+    public init(url: URL) {
         super.init()
         let conf = URLSessionConfiguration.default
         session = URLSession(configuration: conf,
@@ -19,31 +19,31 @@ class SimpleDownloader: NSObject {
         task = session.downloadTask(with: url)
     }
     
-    func onProgress(_ handler: @escaping (Double)->Void) -> SimpleDownloader {
+    public func onProgress(_ handler: @escaping (Double)->Void) -> SimpleDownloader {
         progressHandler = handler
         return self
     }
     
-    func onComplete(_ handler: @escaping (URL)->Void) -> SimpleDownloader {
+    public func onComplete(_ handler: @escaping (URL)->Void) -> SimpleDownloader {
         completionHandler = handler
         return self
     }
     
-    func onCompleteWithError(_ handler: @escaping (Error?)->Void) -> SimpleDownloader {
+    public func onCompleteWithError(_ handler: @escaping (Error?)->Void) -> SimpleDownloader {
         errorHandler = handler
         return self
     }
     
-    func onCancel(_ handler: @escaping ()->Void) -> SimpleDownloader {
+    public func onCancel(_ handler: @escaping ()->Void) -> SimpleDownloader {
         cancelHandler = handler
         return self
     }
     
-    func start() {
+    public func start() {
         task.resume()
     }
     
-    func cancel() {
+    public func cancel() {
         task.cancel()
         cancelHandler?()
     }
@@ -51,7 +51,7 @@ class SimpleDownloader: NSObject {
 
 extension SimpleDownloader : URLSessionDelegate, URLSessionDownloadDelegate {
     
-    public func urlSession(_ session: URLSession,
+    func urlSession(_ session: URLSession,
                            downloadTask: URLSessionDownloadTask,
                            didFinishDownloadingTo location: URL) {
         completionHandler?(location)
@@ -61,7 +61,7 @@ extension SimpleDownloader : URLSessionDelegate, URLSessionDownloadDelegate {
         errorHandler?(error)
     }
     
-    public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         let progress = Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)
         progressHandler?(progress)
     }
