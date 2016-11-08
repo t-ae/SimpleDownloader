@@ -34,4 +34,10 @@ class SimpleRequesterTests: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
 
+    static var allTests : [(String, (SimpleDownloaderTests) -> () throws -> Void)] {
+        return [
+            ("testRequest", testRequest),
+            ("testError", testError)
+        ]
+    }
 }
