@@ -7,326 +7,923 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A7B5A1BC1DD197AF002BCC4E /* SimpleRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1BB1DD197AF002BCC4E /* SimpleRequesterTests.swift */; };
-		A7DCB3951DC831E900D9F47F /* SimpleRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DCB3941DC831E900D9F47F /* SimpleRequester.swift */; };
-		A7DCB3971DC8341900D9F47F /* URLSessionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DCB3961DC8341900D9F47F /* URLSessionWrapper.swift */; };
-		_LinkFileRef_SimpleDownloader_via_SimpleDownloaderTests /* SimpleDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_SimpleDownloader" /* SimpleDownloader.framework */; };
-		__src_cc_ref_Sources/SimpleDownloader.swift /* SimpleDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Sources/SimpleDownloader.swift /* SimpleDownloader.swift */; };
-		__src_cc_ref_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift /* SimpleDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = __PBXFileRef_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift /* SimpleDownloaderTests.swift */; };
+		A7B5A1ED1DD1A1A3002BCC4E /* SimpleDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B5A1E41DD1A1A3002BCC4E /* SimpleDownloader.framework */; };
+		A7B5A1F21DD1A1A3002BCC4E /* SimpleDownloader_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A1F11DD1A1A3002BCC4E /* SimpleDownloader_iOSTests.swift */; };
+		A7B5A1F41DD1A1A3002BCC4E /* SimpleDownloader-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B5A1E61DD1A1A3002BCC4E /* SimpleDownloader-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7B5A2091DD1A1B5002BCC4E /* SimpleDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B5A2001DD1A1B4002BCC4E /* SimpleDownloader.framework */; };
+		A7B5A20E1DD1A1B5002BCC4E /* SimpleDownloader_OSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5A20D1DD1A1B5002BCC4E /* SimpleDownloader_OSXTests.swift */; };
+		A7B5A2101DD1A1B5002BCC4E /* SimpleDownloader-OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B5A2021DD1A1B4002BCC4E /* SimpleDownloader-OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A7DCB3931DC831D000D9F47F /* PBXContainerItemProxy */ = {
+		A7B5A1EE1DD1A1A3002BCC4E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = __RootObject_ /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "______Target_SimpleDownloader";
-			remoteInfo = SimpleDownloader;
+			remoteGlobalIDString = A7B5A1E31DD1A1A3002BCC4E;
+			remoteInfo = "SimpleDownloader-iOS";
+		};
+		A7B5A20A1DD1A1B5002BCC4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7B5A1FF1DD1A1B4002BCC4E;
+			remoteInfo = "SimpleDownloader-OSX";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A7B5A1BB1DD197AF002BCC4E /* SimpleRequesterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleRequesterTests.swift; sourceTree = "<group>"; };
-		A7DCB3941DC831E900D9F47F /* SimpleRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleRequester.swift; sourceTree = "<group>"; };
-		A7DCB3961DC8341900D9F47F /* URLSessionWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionWrapper.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		__PBXFileRef_SimpleDownloader.xcodeproj/Configs/Project.xcconfig /* SimpleDownloader.xcodeproj/Configs/Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimpleDownloader.xcodeproj/Configs/Project.xcconfig; sourceTree = "<group>"; };
-		__PBXFileRef_Sources/SimpleDownloader.swift /* SimpleDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloader.swift; sourceTree = "<group>"; };
-		__PBXFileRef_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift /* SimpleDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloaderTests.swift; sourceTree = "<group>"; };
-		"_____Product_SimpleDownloader" /* SimpleDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"_____Product_SimpleDownloaderTests" /* SimpleDownloaderTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B5A1E41DD1A1A3002BCC4E /* SimpleDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B5A1E61DD1A1A3002BCC4E /* SimpleDownloader-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleDownloader-iOS.h"; sourceTree = "<group>"; };
+		A7B5A1E71DD1A1A3002BCC4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7B5A1EC1DD1A1A3002BCC4E /* SimpleDownloader-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SimpleDownloader-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B5A1F11DD1A1A3002BCC4E /* SimpleDownloader_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloader_iOSTests.swift; sourceTree = "<group>"; };
+		A7B5A1F31DD1A1A3002BCC4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7B5A2001DD1A1B4002BCC4E /* SimpleDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B5A2021DD1A1B4002BCC4E /* SimpleDownloader-OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleDownloader-OSX.h"; sourceTree = "<group>"; };
+		A7B5A2031DD1A1B4002BCC4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7B5A2081DD1A1B4002BCC4E /* SimpleDownloader-OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SimpleDownloader-OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B5A20D1DD1A1B5002BCC4E /* SimpleDownloader_OSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloader_OSXTests.swift; sourceTree = "<group>"; };
+		A7B5A20F1DD1A1B5002BCC4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		OBJ_10 /* SimpleRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequester.swift; sourceTree = "<group>"; };
+		OBJ_11 /* URLSessionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWrapper.swift; sourceTree = "<group>"; };
+		OBJ_14 /* SimpleDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloaderTests.swift; sourceTree = "<group>"; };
+		OBJ_15 /* SimpleRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequesterTests.swift; sourceTree = "<group>"; };
+		OBJ_16 /* TestResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestResources; sourceTree = SOURCE_ROOT; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* SimpleDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		"___LinkPhase_SimpleDownloader" /* Frameworks */ = {
+		A7B5A1E01DD1A1A3002BCC4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		"___LinkPhase_SimpleDownloaderTests" /* Frameworks */ = {
+		A7B5A1E91DD1A1A3002BCC4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
+			buildActionMask = 2147483647;
 			files = (
-				_LinkFileRef_SimpleDownloader_via_SimpleDownloaderTests /* SimpleDownloader.framework in Frameworks */,
+				A7B5A1ED1DD1A1A3002BCC4E /* SimpleDownloader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B5A1FC1DD1A1B4002BCC4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B5A2051DD1A1B4002BCC4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B5A2091DD1A1B5002BCC4E /* SimpleDownloader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		TestProducts_ /* Tests */ = {
+		A7B5A1E51DD1A1A3002BCC4E /* SimpleDownloader-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				"_____Product_SimpleDownloaderTests" /* SimpleDownloaderTests.xctest */,
+				A7B5A1E61DD1A1A3002BCC4E /* SimpleDownloader-iOS.h */,
+				A7B5A1E71DD1A1A3002BCC4E /* Info.plist */,
 			);
-			name = Tests;
+			path = "SimpleDownloader-iOS";
 			sourceTree = "<group>";
 		};
-		"___RootGroup_" = {
+		A7B5A1F01DD1A1A3002BCC4E /* SimpleDownloader-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_Package.swift /* Package.swift */,
-				"_____Configs_" /* Configs */,
-				"_____Sources_" /* Sources */,
-				"_______Tests_" /* Tests */,
-				"____Products_" /* Products */,
+				A7B5A1F11DD1A1A3002BCC4E /* SimpleDownloader_iOSTests.swift */,
+				A7B5A1F31DD1A1A3002BCC4E /* Info.plist */,
 			);
+			path = "SimpleDownloader-iOSTests";
 			sourceTree = "<group>";
 		};
-		"____Products_" /* Products */ = {
+		A7B5A2011DD1A1B4002BCC4E /* SimpleDownloader-OSX */ = {
 			isa = PBXGroup;
 			children = (
-				TestProducts_ /* Tests */,
-				"_____Product_SimpleDownloader" /* SimpleDownloader.framework */,
+				A7B5A2021DD1A1B4002BCC4E /* SimpleDownloader-OSX.h */,
+				A7B5A2031DD1A1B4002BCC4E /* Info.plist */,
 			);
-			name = Products;
+			path = "SimpleDownloader-OSX";
 			sourceTree = "<group>";
 		};
-		"_____Configs_" /* Configs */ = {
+		A7B5A20C1DD1A1B5002BCC4E /* SimpleDownloader-OSXTests */ = {
 			isa = PBXGroup;
 			children = (
-				__PBXFileRef_SimpleDownloader.xcodeproj/Configs/Project.xcconfig /* SimpleDownloader.xcodeproj/Configs/Project.xcconfig */,
+				A7B5A20D1DD1A1B5002BCC4E /* SimpleDownloader_OSXTests.swift */,
+				A7B5A20F1DD1A1B5002BCC4E /* Info.plist */,
 			);
-			name = Configs;
+			path = "SimpleDownloader-OSXTests";
 			sourceTree = "<group>";
 		};
-		"_____Sources_" /* Sources */ = {
+		OBJ_12 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				"_______Group_SimpleDownloader" /* SimpleDownloader */,
+				OBJ_13 /* SimpleDownloaderTests */,
 			);
-			name = Sources;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		"_______Group_SimpleDownloader" /* SimpleDownloader */ = {
+		OBJ_13 /* SimpleDownloaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7DCB3961DC8341900D9F47F /* URLSessionWrapper.swift */,
-				A7DCB3941DC831E900D9F47F /* SimpleRequester.swift */,
-				__PBXFileRef_Sources/SimpleDownloader.swift /* SimpleDownloader.swift */,
-			);
-			name = SimpleDownloader;
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		"_______Group_SimpleDownloaderTests" /* SimpleDownloaderTests */ = {
-			isa = PBXGroup;
-			children = (
-				__PBXFileRef_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift /* SimpleDownloaderTests.swift */,
-				A7B5A1BB1DD197AF002BCC4E /* SimpleRequesterTests.swift */,
+				OBJ_14 /* SimpleDownloaderTests.swift */,
+				OBJ_15 /* SimpleRequesterTests.swift */,
 			);
 			name = SimpleDownloaderTests;
 			path = Tests/SimpleDownloaderTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		"_______Tests_" /* Tests */ = {
+		OBJ_17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"_______Group_SimpleDownloaderTests" /* SimpleDownloaderTests */,
+				A7B5A1E41DD1A1A3002BCC4E /* SimpleDownloader.framework */,
+				A7B5A1EC1DD1A1A3002BCC4E /* SimpleDownloader-iOSTests.xctest */,
+				A7B5A2001DD1A1B4002BCC4E /* SimpleDownloader.framework */,
+				A7B5A2081DD1A1B4002BCC4E /* SimpleDownloader-OSXTests.xctest */,
 			);
-			name = Tests;
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_12 /* Tests */,
+				OBJ_16 /* TestResources */,
+				A7B5A1E51DD1A1A3002BCC4E /* SimpleDownloader-iOS */,
+				A7B5A1F01DD1A1A3002BCC4E /* SimpleDownloader-iOSTests */,
+				A7B5A2011DD1A1B4002BCC4E /* SimpleDownloader-OSX */,
+				A7B5A20C1DD1A1B5002BCC4E /* SimpleDownloader-OSXTests */,
+				OBJ_17 /* Products */,
+			);
+			name = "";
 			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* SimpleDownloader */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		OBJ_8 /* SimpleDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* SimpleDownloader.swift */,
+				OBJ_10 /* SimpleRequester.swift */,
+				OBJ_11 /* URLSessionWrapper.swift */,
+			);
+			name = SimpleDownloader;
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A7B5A1E11DD1A1A3002BCC4E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B5A1F41DD1A1A3002BCC4E /* SimpleDownloader-iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B5A1FD1DD1A1B4002BCC4E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B5A2101DD1A1B5002BCC4E /* SimpleDownloader-OSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		"______Target_SimpleDownloader" /* SimpleDownloader */ = {
+		A7B5A1E31DD1A1A3002BCC4E /* SimpleDownloader-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_SimpleDownloader" /* Build configuration list for PBXNativeTarget "SimpleDownloader" */;
+			buildConfigurationList = A7B5A1F51DD1A1A3002BCC4E /* Build configuration list for PBXNativeTarget "SimpleDownloader-iOS" */;
 			buildPhases = (
-				CompilePhase_SimpleDownloader /* Sources */,
-				"___LinkPhase_SimpleDownloader" /* Frameworks */,
+				A7B5A1DF1DD1A1A3002BCC4E /* Sources */,
+				A7B5A1E01DD1A1A3002BCC4E /* Frameworks */,
+				A7B5A1E11DD1A1A3002BCC4E /* Headers */,
+				A7B5A1E21DD1A1A3002BCC4E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SimpleDownloader;
-			productName = SimpleDownloader;
-			productReference = "_____Product_SimpleDownloader" /* SimpleDownloader.framework */;
+			name = "SimpleDownloader-iOS";
+			productName = "SimpleDownloader-iOS";
+			productReference = A7B5A1E41DD1A1A3002BCC4E /* SimpleDownloader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"______Target_SimpleDownloaderTests" /* SimpleDownloaderTests */ = {
+		A7B5A1EB1DD1A1A3002BCC4E /* SimpleDownloader-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = "_______Confs_SimpleDownloaderTests" /* Build configuration list for PBXNativeTarget "SimpleDownloaderTests" */;
+			buildConfigurationList = A7B5A1F81DD1A1A3002BCC4E /* Build configuration list for PBXNativeTarget "SimpleDownloader-iOSTests" */;
 			buildPhases = (
-				CompilePhase_SimpleDownloaderTests /* Sources */,
-				"___LinkPhase_SimpleDownloaderTests" /* Frameworks */,
+				A7B5A1E81DD1A1A3002BCC4E /* Sources */,
+				A7B5A1E91DD1A1A3002BCC4E /* Frameworks */,
+				A7B5A1EA1DD1A1A3002BCC4E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				__Dependency_SimpleDownloader /* PBXTargetDependency */,
+				A7B5A1EF1DD1A1A3002BCC4E /* PBXTargetDependency */,
 			);
-			name = SimpleDownloaderTests;
-			productName = SimpleDownloaderTests;
-			productReference = "_____Product_SimpleDownloaderTests" /* SimpleDownloaderTests.xctest */;
+			name = "SimpleDownloader-iOSTests";
+			productName = "SimpleDownloader-iOSTests";
+			productReference = A7B5A1EC1DD1A1A3002BCC4E /* SimpleDownloader-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7B5A1FF1DD1A1B4002BCC4E /* SimpleDownloader-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7B5A2111DD1A1B5002BCC4E /* Build configuration list for PBXNativeTarget "SimpleDownloader-OSX" */;
+			buildPhases = (
+				A7B5A1FB1DD1A1B4002BCC4E /* Sources */,
+				A7B5A1FC1DD1A1B4002BCC4E /* Frameworks */,
+				A7B5A1FD1DD1A1B4002BCC4E /* Headers */,
+				A7B5A1FE1DD1A1B4002BCC4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SimpleDownloader-OSX";
+			productName = "SimpleDownloader-OSX";
+			productReference = A7B5A2001DD1A1B4002BCC4E /* SimpleDownloader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A7B5A2071DD1A1B4002BCC4E /* SimpleDownloader-OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7B5A2141DD1A1B5002BCC4E /* Build configuration list for PBXNativeTarget "SimpleDownloader-OSXTests" */;
+			buildPhases = (
+				A7B5A2041DD1A1B4002BCC4E /* Sources */,
+				A7B5A2051DD1A1B4002BCC4E /* Frameworks */,
+				A7B5A2061DD1A1B4002BCC4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7B5A20B1DD1A1B5002BCC4E /* PBXTargetDependency */,
+			);
+			name = "SimpleDownloader-OSXTests";
+			productName = "SimpleDownloader-OSXTests";
+			productReference = A7B5A2081DD1A1B4002BCC4E /* SimpleDownloader-OSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		__RootObject_ /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					A7B5A1E31DD1A1A3002BCC4E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = AX6P4U3X2R;
+						ProvisioningStyle = Automatic;
+					};
+					A7B5A1EB1DD1A1A3002BCC4E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = AX6P4U3X2R;
+						ProvisioningStyle = Automatic;
+					};
+					A7B5A1FF1DD1A1B4002BCC4E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = AX6P4U3X2R;
+						ProvisioningStyle = Automatic;
+					};
+					A7B5A2071DD1A1B4002BCC4E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = AX6P4U3X2R;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
-			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "SimpleDownloader" */;
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SimpleDownloader" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = "___RootGroup_";
-			productRefGroup = "____Products_" /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"______Target_SimpleDownloader" /* SimpleDownloader */,
-				"______Target_SimpleDownloaderTests" /* SimpleDownloaderTests */,
+				A7B5A1E31DD1A1A3002BCC4E /* SimpleDownloader-iOS */,
+				A7B5A1EB1DD1A1A3002BCC4E /* SimpleDownloader-iOSTests */,
+				A7B5A1FF1DD1A1B4002BCC4E /* SimpleDownloader-OSX */,
+				A7B5A2071DD1A1B4002BCC4E /* SimpleDownloader-OSXTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		CompilePhase_SimpleDownloader /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
+/* Begin PBXResourcesBuildPhase section */
+		A7B5A1E21DD1A1A3002BCC4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
-				__src_cc_ref_Sources/SimpleDownloader.swift /* SimpleDownloader.swift in Sources */,
-				A7DCB3951DC831E900D9F47F /* SimpleRequester.swift in Sources */,
-				A7DCB3971DC8341900D9F47F /* URLSessionWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CompilePhase_SimpleDownloaderTests /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
+		A7B5A1EA1DD1A1A3002BCC4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
-				A7B5A1BC1DD197AF002BCC4E /* SimpleRequesterTests.swift in Sources */,
-				__src_cc_ref_Tests/SimpleDownloaderTests/SimpleDownloaderTests.swift /* SimpleDownloaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B5A1FE1DD1A1B4002BCC4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B5A2061DD1A1B4002BCC4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7B5A1DF1DD1A1A3002BCC4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B5A1E81DD1A1A3002BCC4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B5A1F21DD1A1A3002BCC4E /* SimpleDownloader_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B5A1FB1DD1A1B4002BCC4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B5A2041DD1A1B4002BCC4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B5A20E1DD1A1B5002BCC4E /* SimpleDownloader_OSXTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		__Dependency_SimpleDownloader /* PBXTargetDependency */ = {
+		A7B5A1EF1DD1A1A3002BCC4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "______Target_SimpleDownloader" /* SimpleDownloader */;
-			targetProxy = A7DCB3931DC831D000D9F47F /* PBXContainerItemProxy */;
+			target = A7B5A1E31DD1A1A3002BCC4E /* SimpleDownloader-iOS */;
+			targetProxy = A7B5A1EE1DD1A1A3002BCC4E /* PBXContainerItemProxy */;
+		};
+		A7B5A20B1DD1A1B5002BCC4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7B5A1FF1DD1A1B4002BCC4E /* SimpleDownloader-OSX */;
+			targetProxy = A7B5A20A1DD1A1B5002BCC4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		_ReleaseConf_SimpleDownloader /* Release */ = {
+		A7B5A1F61DD1A1A3002BCC4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AX6P4U3X2R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloader_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SimpleDownloader;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SimpleDownloader-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.qoncept.SimpleDownloader;
+				PRODUCT_NAME = SimpleDownloader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A7B5A1F71DD1A1A3002BCC4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AX6P4U3X2R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SimpleDownloader-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.qoncept.SimpleDownloader;
+				PRODUCT_NAME = SimpleDownloader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		_ReleaseConf_SimpleDownloaderTests /* Release */ = {
+		A7B5A1F91DD1A1A3002BCC4E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloaderTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		"___DebugConf_SimpleDownloader" /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = AX6P4U3X2R;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloader_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SimpleDownloader;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SimpleDownloader-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.qoncept.SimpleDownloader-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		"___DebugConf_SimpleDownloaderTests" /* Debug */ = {
+		A7B5A1FA1DD1A1A3002BCC4E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
-				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloaderTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = AX6P4U3X2R;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SimpleDownloader-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.qoncept.SimpleDownloader-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		"_____Release_" /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_SimpleDownloader.xcodeproj/Configs/Project.xcconfig /* SimpleDownloader.xcodeproj/Configs/Project.xcconfig */;
-			buildSettings = {
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		"_______Debug_" /* Debug */ = {
+		A7B5A2121DD1A1B5002BCC4E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = __PBXFileRef_SimpleDownloader.xcodeproj/Configs/Project.xcconfig /* SimpleDownloader.xcodeproj/Configs/Project.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AX6P4U3X2R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SimpleDownloader-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.qoncept.SimpleDownloader;
+				PRODUCT_NAME = SimpleDownloader;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		A7B5A2131DD1A1B5002BCC4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = AX6P4U3X2R;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SimpleDownloader-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.qoncept.SimpleDownloader;
+				PRODUCT_NAME = SimpleDownloader;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A7B5A2151DD1A1B5002BCC4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AX6P4U3X2R;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SimpleDownloader-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.qoncept.SimpleDownloader-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A7B5A2161DD1A1B5002BCC4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = AX6P4U3X2R;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "SimpleDownloader-OSXTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.qoncept.SimpleDownloader-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		"___RootConfs_" /* Build configuration list for PBXProject "SimpleDownloader" */ = {
+		A7B5A1F51DD1A1A3002BCC4E /* Build configuration list for PBXNativeTarget "SimpleDownloader-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"_______Debug_" /* Debug */,
-				"_____Release_" /* Release */,
+				A7B5A1F61DD1A1A3002BCC4E /* Debug */,
+				A7B5A1F71DD1A1A3002BCC4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
 		};
-		"_______Confs_SimpleDownloader" /* Build configuration list for PBXNativeTarget "SimpleDownloader" */ = {
+		A7B5A1F81DD1A1A3002BCC4E /* Build configuration list for PBXNativeTarget "SimpleDownloader-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"___DebugConf_SimpleDownloader" /* Debug */,
-				_ReleaseConf_SimpleDownloader /* Release */,
+				A7B5A1F91DD1A1A3002BCC4E /* Debug */,
+				A7B5A1FA1DD1A1A3002BCC4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
 		};
-		"_______Confs_SimpleDownloaderTests" /* Build configuration list for PBXNativeTarget "SimpleDownloaderTests" */ = {
+		A7B5A2111DD1A1B5002BCC4E /* Build configuration list for PBXNativeTarget "SimpleDownloader-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				"___DebugConf_SimpleDownloaderTests" /* Debug */,
-				_ReleaseConf_SimpleDownloaderTests /* Release */,
+				A7B5A2121DD1A1B5002BCC4E /* Debug */,
+				A7B5A2131DD1A1B5002BCC4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7B5A2141DD1A1B5002BCC4E /* Build configuration list for PBXNativeTarget "SimpleDownloader-OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7B5A2151DD1A1B5002BCC4E /* Debug */,
+				A7B5A2161DD1A1B5002BCC4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "SimpleDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = __RootObject_ /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }

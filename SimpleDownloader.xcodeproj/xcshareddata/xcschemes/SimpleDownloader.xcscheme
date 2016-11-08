@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SimpleDownloader"
+               BlueprintIdentifier = "OBJ_20"
                BuildableName = "SimpleDownloader.framework"
                BlueprintName = "SimpleDownloader"
                ReferencedContainer = "container:SimpleDownloader.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_SimpleDownloaderTests"
+               BlueprintIdentifier = "OBJ_29"
                BuildableName = "SimpleDownloaderTests.xctest"
                BlueprintName = "SimpleDownloaderTests"
                ReferencedContainer = "container:SimpleDownloader.xcodeproj">
@@ -55,7 +55,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "______Target_SimpleDownloader"
+            BlueprintIdentifier = "OBJ_20"
             BuildableName = "SimpleDownloader.framework"
             BlueprintName = "SimpleDownloader"
             ReferencedContainer = "container:SimpleDownloader.xcodeproj">
