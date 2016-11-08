@@ -1,5 +1,5 @@
 import XCTest
-@testable import SimpleDownloader
+import SimpleDownloader
 
 class SimpleDownloaderTests: XCTestCase {
     
@@ -10,22 +10,23 @@ class SimpleDownloaderTests: XCTestCase {
         let ex = expectation(description: "download")
         
         let downloader = SimpleDownloader(url: URL(string: url)!)
-            .onProgress { print($0) }
-            .onComplete { location in
-                ex.fulfill()
-                try! FileManager.default.removeItem(at: location)
+        downloader.onProgress { print($0) }
+        
+        downloader.onComplete { (location:URL)->Void in
+            ex.fulfill()
+            try! FileManager.default.removeItem(at: location)
         }
         downloader.start()
         
         waitForExpectations(timeout: 15, handler: nil)
     }
-    
+
     func testCancel() {
         let ex = expectation(description: "download")
         
         let downloader = SimpleDownloader(url: URL(string: url)!)
-            .onCancel {
-                ex.fulfill()
+        downloader.onCancel {
+            ex.fulfill()
         }
         downloader.start()
         let deadline = DispatchTime.now() + 3
@@ -40,8 +41,8 @@ class SimpleDownloaderTests: XCTestCase {
         let ex = expectation(description: "download")
         
         let downloader = SimpleDownloader(url: URL(string: url + "/hogehoge")!)
-            .onCompleteWithError { _ in
-                ex.fulfill()
+        downloader.onCompleteWithError { _ in
+            ex.fulfill()
         }
         downloader.start()
         
