@@ -3,7 +3,7 @@ import SimpleDownloader
 
 class SimpleDownloaderTests: XCTestCase {
     
-    let url = "http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz"
+    let url = "https://raw.githubusercontent.com/t-ae/SimpleDownloader/master/TestResources/test.txt"
     
     func testDownload() {
         

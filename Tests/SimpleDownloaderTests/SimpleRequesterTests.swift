@@ -3,6 +3,35 @@ import SimpleDownloader
 
 class SimpleRequesterTests: XCTestCase {
 
+    let url = "https://raw.githubusercontent.com/t-ae/SimpleDownloader/master/TestResources/test.txt"
+    let content = "1234567890\n"
     
+    func testRequest() {
+        
+        let ex = expectation(description: "request")
+        
+        let requester = SimpleRequester(method: .get, url: URL(string: url)!)
+        
+        requester.onComplete { data in
+            let str = String(data: data, encoding: String.Encoding.utf8)
+            XCTAssertEqual(str, self.content)
+            ex.fulfill()
+        }
+        requester.start()
+        
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func testError() {
+        let ex = expectation(description: "request")
+        
+        let requester = SimpleDownloader(url: URL(string: url + "/hogehoge")!)
+        requester.onCompleteWithError { _ in
+            ex.fulfill()
+        }
+        requester.start()
+        
+        waitForExpectations(timeout: 15, handler: nil)
+    }
 
 }
