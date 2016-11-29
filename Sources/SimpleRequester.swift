@@ -58,6 +58,13 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
     private func onProgress(_ handler: @escaping (Double) -> Void) -> SimpleRequester {
         fatalError("No progress handler.")
     }
+    
+    public func onComplete(_ handler: @escaping (String) -> Void) {
+        onComplete { (data: Data) in
+            let str = String(data: data, encoding: String.Encoding.utf8)!
+            handler(str)
+        }
+    }
 }
 
 extension SimpleRequester: URLSessionDataDelegate {

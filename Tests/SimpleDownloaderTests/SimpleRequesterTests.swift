@@ -12,8 +12,7 @@ class SimpleRequesterTests: XCTestCase {
         
         let requester = SimpleRequester(method: .get, url: URL(string: url)!)
         
-        requester.onComplete { data in
-            let str = String(data: data, encoding: String.Encoding.utf8)
+        requester.onComplete { str in
             XCTAssertEqual(str, self.content)
             ex.fulfill()
         }
