@@ -19,7 +19,7 @@ extension URLSessionWrapper {
         progressHandler = handler
     }
     
-    public func onComplete(_ handler: @escaping (ResultType)->Void) {
+    public func onComplete(_ handler: @escaping (Self.ResultType)->Void) {
         completionHandler = handler
     }
     
