@@ -17,16 +17,18 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
     var session: URLSession!
     var task: URLSessionTask!
     
-    public init(method: HttpMethod, url: URL, parameters: [String:String] = [:]) {
+    public init(method: HttpMethod, url: URL, headers: [String:String] = [:], parameters: [String:String] = [:]) {
         super.init()
         let conf = URLSessionConfiguration.default
         session = URLSession(configuration: conf,
                              delegate: self,
                              delegateQueue: OperationQueue.main)
         
-        let query = parameters.map { k, v in
-            "\(escape(k))=\(escape(v))"
-        }.joined(separator: "&")
+        let query = parameters
+            .map { k, v in
+                "\(escape(k))=\(escape(v))"
+            }
+            .joined(separator: "&")
         
         var request: URLRequest
         switch method {
@@ -40,6 +42,10 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
             break
         }
         request.httpMethod = method.rawValue
+        
+        for (key,value) in headers {
+            request.addValue(value, forHTTPHeaderField: key)
+        }
         
         task = session.dataTask(with: request)
     }
