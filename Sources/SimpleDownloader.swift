@@ -5,8 +5,8 @@ public class SimpleDownloader: NSObject, URLSessionWrapper {
     public typealias ResultType = URL
     
     var progressHandler: ((Double)->Void)?
-    var completionHandler: ((ResultType)->Void)?
-    var errorHandler: ((Error?)->Void)?
+    var completionHandler: ((URL)->Void)?
+    var errorHandler: ((Error)->Void)?
     var cancelHandler: (()->Void)?
     
     var session: URLSession!
@@ -27,18 +27,24 @@ public class SimpleDownloader: NSObject, URLSessionWrapper {
     }
 }
 
-extension SimpleDownloader : URLSessionDelegate, URLSessionDownloadDelegate {
+extension SimpleDownloader : URLSessionDownloadDelegate {
     
     public func urlSession(_ session: URLSession,
                            downloadTask: URLSessionDownloadTask,
                            didFinishDownloadingTo location: URL) {
+        
         completionHandler?(location)
+        
     }
     
     public func urlSession(_ session: URLSession,
                            task: URLSessionTask,
                            didCompleteWithError error: Error?) {
-        errorHandler?(error)
+        
+        if let error = error {
+            errorHandler?(error)
+        }
+        
     }
     
     public func urlSession(_ session: URLSession,

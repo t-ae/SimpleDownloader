@@ -7,11 +7,11 @@ public enum HttpMethod: String {
 
 public class SimpleRequester: NSObject, URLSessionWrapper {
 
-    public typealias ResultType = Data
+    public typealias ResultType = (URLResponse, Data)
     
     var progressHandler: ((Double)->Void)?
-    var completionHandler: ((ResultType)->Void)?
-    var errorHandler: ((Error?)->Void)?
+    var completionHandler: ((URLResponse, Data)->Void)?
+    var errorHandler: ((Error)->Void)?
     var cancelHandler: (()->Void)?
     
     var session: URLSession!
@@ -23,9 +23,7 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
         
         super.init()
         let conf = URLSessionConfiguration.default
-        session = URLSession(configuration: conf,
-                             delegate: self,
-                             delegateQueue: OperationQueue.main)
+        session = URLSession(configuration: conf)
         
         let query = parameters
             .map { k, v in
@@ -50,7 +48,13 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
             request.addValue(value, forHTTPHeaderField: key)
         }
         
-        task = session.dataTask(with: request)
+        task = session.dataTask(with: request) { data, response, error in
+            if let error = error {
+                self.errorHandler?(error)
+            } else {
+                self.completionHandler?((response!, data!))
+            }
+        }
     }
     
     private func escape(_ string: String) -> String {
@@ -60,26 +64,5 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
     
     private func onProgress(_ handler: @escaping (Double) -> Void) -> SimpleRequester {
         fatalError("No progress handler.")
-    }
-    
-    public func onComplete(_ handler: @escaping (String) -> Void) {
-        onComplete { (data: Data) in
-            let str = String(data: data, encoding: String.Encoding.utf8)!
-            handler(str)
-        }
-    }
-}
-
-extension SimpleRequester: URLSessionDataDelegate {
-    public func urlSession(_ session: URLSession,
-                           dataTask: URLSessionDataTask,
-                           didReceive data: Data) {
-        completionHandler?(data)
-    }
-    
-    public func urlSession(_ session: URLSession,
-                           task: URLSessionTask,
-                           didCompleteWithError error: Error?) {
-        errorHandler?(error)
     }
 }

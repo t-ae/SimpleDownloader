@@ -7,7 +7,7 @@ internal protocol URLSessionWrapper : class {
     
     var progressHandler: ((Double)->Void)? { get set }
     var completionHandler: ((ResultType)->Void)? { get set }
-    var errorHandler: ((Error?)->Void)? { get set }
+    var errorHandler: ((Error)->Void)? { get set }
     var cancelHandler: (()->Void)? { get set }
     
     var session: URLSession! { get set }
@@ -23,7 +23,7 @@ extension URLSessionWrapper {
         completionHandler = handler
     }
     
-    public func onCompleteWithError(_ handler: @escaping (Error?)->Void) {
+    public func onCompleteWithError(_ handler: @escaping (Error)->Void) {
         errorHandler = handler
     }
     

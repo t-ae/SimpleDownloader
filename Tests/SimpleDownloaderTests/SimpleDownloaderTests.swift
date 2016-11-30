@@ -40,8 +40,36 @@ class SimpleDownloaderTests: XCTestCase {
     func testError() {
         let ex = expectation(description: "download")
         
+        let downloader = SimpleDownloader(url: URL(string: "tests")!)
+        downloader.onProgress { print($0) }
+        
+        downloader.onComplete { (location:URL)->Void in
+            print(location)
+        }
+        downloader.onCompleteWithError { error in
+            print(error)
+            ex.fulfill()
+        }
+        downloader.start()
+        
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    func test404() {
+        
+        // If 404, error must be thrown.
+        // https://developer.apple.com/reference/foundation/urlsessiondownloadtask
+        // but, oddly, error is nil, and task complete with 404 file.
+
+        let ex = expectation(description: "download")
+        
         let downloader = SimpleDownloader(url: URL(string: url + "/hogehoge")!)
-        downloader.onCompleteWithError { _ in
+        downloader.onComplete { url in
+            print(url)
+            print(try! String(contentsOf: url))
+        }
+        downloader.onCompleteWithError { error in
+            print("error:", error)
             ex.fulfill()
         }
         downloader.start()

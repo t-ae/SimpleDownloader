@@ -12,7 +12,8 @@ class SimpleRequesterTests: XCTestCase {
         
         let requester = SimpleRequester(method: .get, url: URL(string: url)!)
         
-        requester.onComplete { str in
+        requester.onComplete { response, data in
+            let str = String(data: data, encoding: .utf8)
             XCTAssertEqual(str, self.content)
             ex.fulfill()
         }
@@ -24,7 +25,7 @@ class SimpleRequesterTests: XCTestCase {
     func testError() {
         let ex = expectation(description: "request")
         
-        let requester = SimpleDownloader(url: URL(string: url + "/hogehoge")!)
+        let requester = SimpleDownloader(url: URL(string: "test")!)
         requester.onCompleteWithError { _ in
             ex.fulfill()
         }
