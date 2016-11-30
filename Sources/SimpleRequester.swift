@@ -17,7 +17,10 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
     var session: URLSession!
     var task: URLSessionTask!
     
-    public init(method: HttpMethod, url: URL, headers: [String:String] = [:], parameters: [String:String] = [:]) {
+    public init(method: HttpMethod, url: URL,
+                headers: [String:String] = [:],
+                parameters: [String:String] = [:]) {
+        
         super.init()
         let conf = URLSessionConfiguration.default
         session = URLSession(configuration: conf,
@@ -68,11 +71,15 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
 }
 
 extension SimpleRequester: URLSessionDataDelegate {
-    public func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+    public func urlSession(_ session: URLSession,
+                           dataTask: URLSessionDataTask,
+                           didReceive data: Data) {
         completionHandler?(data)
     }
     
-    public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+    public func urlSession(_ session: URLSession,
+                           task: URLSessionTask,
+                           didCompleteWithError error: Error?) {
         errorHandler?(error)
     }
 }
