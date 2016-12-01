@@ -33,8 +33,9 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
                            downloadTask: URLSessionDownloadTask,
                            didFinishDownloadingTo location: URL) {
         
-        completionHandler?(location)
-        
+        DispatchQueue.main.async {
+            self.completionHandler?(location)
+        }
     }
     
     public func urlSession(_ session: URLSession,
@@ -42,7 +43,9 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
                            didCompleteWithError error: Error?) {
         
         if let error = error {
-            errorHandler?(error)
+            DispatchQueue.main.async {
+                self.errorHandler?(error)
+            }
         }
         
     }
@@ -52,7 +55,9 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
                            didWriteData bytesWritten: Int64,
                            totalBytesWritten: Int64,
                            totalBytesExpectedToWrite: Int64) {
-        let progress = Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)
-        progressHandler?(progress)
+        DispatchQueue.main.async {
+            let progress = Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)
+            self.progressHandler?(progress)
+        }
     }
 }
