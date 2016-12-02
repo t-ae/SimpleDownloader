@@ -4,6 +4,8 @@ public class SimpleDownloader: NSObject, URLSessionWrapper {
     
     public typealias ResultType = URL
     
+    let destination: URL
+    
     var progressHandler: ((Double)->Void)?
     var completionHandler: ((URL)->Void)?
     var errorHandler: ((Error)->Void)?
@@ -12,8 +14,10 @@ public class SimpleDownloader: NSObject, URLSessionWrapper {
     var session: URLSession!
     var task: URLSessionTask!
     
-    public init(url: URL, headers: [String:String] = [:]) {
+    public init(url: URL, destination: URL, headers: [String:String] = [:]) {
+        self.destination = destination
         super.init()
+        
         let conf = URLSessionConfiguration.default
         session = URLSession(configuration: conf,
                              delegate: self,
@@ -32,7 +36,15 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
     public func urlSession(_ session: URLSession,
                            downloadTask: URLSessionDownloadTask,
                            didFinishDownloadingTo location: URL) {
-        self.completionHandler?(location)
+        do {
+            try FileManager.default.moveItem(at: location, to: destination)
+            DispatchQueue.main.async {
+                self.completionHandler?(self.destination)
+            }
+        } catch(let e) {
+            self.errorHandler?(e)
+        }
+        
     }
     
     public func urlSession(_ session: URLSession,
@@ -40,7 +52,9 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
                            didCompleteWithError error: Error?) {
         
         if let error = error {
-            self.errorHandler?(error)
+            DispatchQueue.main.async {
+                self.errorHandler?(error)
+            }
         }
         
     }
@@ -52,7 +66,9 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
                            totalBytesExpectedToWrite: Int64) {
         
         let progress = Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)
-        self.progressHandler?(progress)
+        DispatchQueue.main.async {
+            self.progressHandler?(progress)
+        }
         
     }
 }

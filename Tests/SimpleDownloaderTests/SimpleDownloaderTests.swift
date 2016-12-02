@@ -4,17 +4,25 @@ import SimpleDownloader
 class SimpleDownloaderTests: XCTestCase {
     
     let url = "https://raw.githubusercontent.com/t-ae/SimpleDownloader/master/TestResources/test.txt"
+    let dest = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("temp.txt")
     
     func testDownload() {
         
         let ex = expectation(description: "download")
-        
-        let downloader = SimpleDownloader(url: URL(string: url)!)
+        let downloader = SimpleDownloader(url: URL(string: url)!, destination: dest)
         downloader.onProgress { print($0) }
         
+        if FileManager.default.fileExists(atPath: dest.path) {
+            try! FileManager.default.removeItem(at: dest)
+        }
+        
         downloader.onComplete { (location:URL)->Void in
+            print(location)
             ex.fulfill()
             try! FileManager.default.removeItem(at: location)
+        }
+        downloader.onCompleteWithError { e in
+            print(e)
         }
         downloader.start()
         
@@ -24,7 +32,11 @@ class SimpleDownloaderTests: XCTestCase {
     func testCancel() {
         let ex = expectation(description: "download")
         
-        let downloader = SimpleDownloader(url: URL(string: url)!)
+        if FileManager.default.fileExists(atPath: dest.path) {
+            try! FileManager.default.removeItem(at: dest)
+        }
+        
+        let downloader = SimpleDownloader(url: URL(string: url)!, destination: dest)
         downloader.onCancel {
             ex.fulfill()
         }
@@ -40,7 +52,11 @@ class SimpleDownloaderTests: XCTestCase {
     func testError() {
         let ex = expectation(description: "download")
         
-        let downloader = SimpleDownloader(url: URL(string: "tests")!)
+        if FileManager.default.fileExists(atPath: dest.path) {
+            try! FileManager.default.removeItem(at: dest)
+        }
+        
+        let downloader = SimpleDownloader(url: URL(string: "tests")!, destination: dest)
         downloader.onProgress { print($0) }
         
         downloader.onComplete { (location:URL)->Void in
@@ -63,7 +79,11 @@ class SimpleDownloaderTests: XCTestCase {
 
         let ex = expectation(description: "download")
         
-        let downloader = SimpleDownloader(url: URL(string: url + "/hogehoge")!)
+        if FileManager.default.fileExists(atPath: dest.path) {
+            try! FileManager.default.removeItem(at: dest)
+        }
+        
+        let downloader = SimpleDownloader(url: URL(string: url + "/hogehoge")!, destination: dest)
         downloader.onComplete { url in
             print(url)
             print(try! String(contentsOf: url))
@@ -74,7 +94,7 @@ class SimpleDownloaderTests: XCTestCase {
         }
         downloader.start()
         
-        waitForExpectations(timeout: 15, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
     static var allTests : [(String, (SimpleDownloaderTests) -> () throws -> Void)] {

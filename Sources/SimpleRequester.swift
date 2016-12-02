@@ -49,10 +49,12 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
         }
         
         task = session.dataTask(with: request) { data, response, error in
-            if let error = error {
-                self.errorHandler?(error)
-            } else {
-                self.completionHandler?((response!, data!))
+            DispatchQueue.main.async {
+                if let error = error {
+                    self.errorHandler?(error)
+                } else {
+                    self.completionHandler?((response!, data!))
+                }
             }
         }
     }

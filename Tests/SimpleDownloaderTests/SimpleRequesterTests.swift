@@ -25,7 +25,7 @@ class SimpleRequesterTests: XCTestCase {
     func testError() {
         let ex = expectation(description: "request")
         
-        let requester = SimpleDownloader(url: URL(string: "test")!)
+        let requester = SimpleRequester(method: .get, url: URL(string: "test")!)
         requester.onCompleteWithError { _ in
             ex.fulfill()
         }
