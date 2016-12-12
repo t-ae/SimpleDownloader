@@ -72,10 +72,6 @@ class SimpleDownloaderTests: XCTestCase {
     }
     
     func test404() {
-        
-        // If 404, error must be thrown.
-        // https://developer.apple.com/reference/foundation/urlsessiondownloadtask
-        // but, oddly, error is nil, and task complete with 404 file.
 
         let ex = expectation(description: "download")
         

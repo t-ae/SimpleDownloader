@@ -36,6 +36,14 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
     public func urlSession(_ session: URLSession,
                            downloadTask: URLSessionDownloadTask,
                            didFinishDownloadingTo location: URL) {
+        
+        let response = downloadTask.response as? HTTPURLResponse
+        
+        guard response?.statusCode == 200 else {
+            self.errorHandler?(SimpleDownloaderError.responseCode(code: response?.statusCode))
+            return
+        }
+        
         do {
             try FileManager.default.moveItem(at: location, to: destination)
             DispatchQueue.main.async {
@@ -71,4 +79,8 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
         }
         
     }
+}
+
+enum SimpleDownloaderError: Error {
+    case responseCode(code: Int?)
 }
