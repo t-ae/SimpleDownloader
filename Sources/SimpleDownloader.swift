@@ -14,12 +14,14 @@ public class SimpleDownloader: NSObject, URLSessionWrapper {
     var session: URLSession!
     var task: URLSessionTask!
     
-    public init(url: URL, destination: URL, headers: [String:String] = [:]) {
+    public init(url: URL,
+                destination: URL,
+                headers: [String:String] = [:],
+                config: URLSessionConfiguration = URLSessionConfiguration.default) {
         self.destination = destination
         super.init()
         
-        let conf = URLSessionConfiguration.default
-        session = URLSession(configuration: conf,
+        session = URLSession(configuration: config,
                              delegate: self,
                              delegateQueue: OperationQueue.main)
         

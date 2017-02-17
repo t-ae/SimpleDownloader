@@ -19,11 +19,10 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
     
     public init(method: HttpMethod, url: URL,
                 headers: [String:String] = [:],
-                parameters: [String:String] = [:]) {
+                parameters: [String:String] = [:],
+                config: URLSessionConfiguration = URLSessionConfiguration.default) {
         
         super.init()
-        let conf = URLSessionConfiguration.default
-        session = URLSession(configuration: conf)
         
         let query = parameters
             .map { k, v in
@@ -47,6 +46,8 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
         for (key,value) in headers {
             request.addValue(value, forHTTPHeaderField: key)
         }
+        
+        session = URLSession(configuration: config)
         
         task = session.dataTask(with: request) { data, response, error in
             DispatchQueue.main.async {
