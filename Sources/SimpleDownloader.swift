@@ -83,6 +83,6 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
     }
 }
 
-enum SimpleDownloaderError: Error {
+public enum SimpleDownloaderError: Error {
     case responseCode(code: Int?)
 }
