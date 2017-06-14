@@ -42,19 +42,22 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
         let response = downloadTask.response as? HTTPURLResponse
         
         guard response?.statusCode == 200 else {
-            self.errorHandler?(SimpleDownloaderError.responseCode(code: response?.statusCode))
+            DispatchQueue.main.async {
+                self.errorHandler?(SimpleDownloaderError.responseCode(code: response?.statusCode))
+                self.session.finishTasksAndInvalidate()
+            }
             return
         }
         
-        do {
-            try FileManager.default.moveItem(at: location, to: destination)
-            DispatchQueue.main.async {
+        DispatchQueue.main.async {
+            do {
+                try FileManager.default.moveItem(at: location, to: self.destination)
                 self.completionHandler?(self.destination)
+            } catch(let e) {
+                self.errorHandler?(e)
             }
-        } catch(let e) {
-            self.errorHandler?(e)
+            self.session.finishTasksAndInvalidate()
         }
-        
     }
     
     public func urlSession(_ session: URLSession,
@@ -64,9 +67,9 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
         if let error = error {
             DispatchQueue.main.async {
                 self.errorHandler?(error)
+                self.session.finishTasksAndInvalidate()
             }
         }
-        
     }
     
     public func urlSession(_ session: URLSession,
@@ -79,7 +82,6 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
         DispatchQueue.main.async {
             self.progressHandler?(progress)
         }
-        
     }
 }
 

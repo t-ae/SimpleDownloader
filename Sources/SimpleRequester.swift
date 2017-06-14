@@ -56,6 +56,7 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
                 } else {
                     self.completionHandler?((response!, data!))
                 }
+                self.session.finishTasksAndInvalidate()
             }
         }
     }
