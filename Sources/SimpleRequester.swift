@@ -10,7 +10,7 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
     public typealias ResultType = (URLResponse, Data)
     
     var progressHandler: ((Double)->Void)?
-    var completionHandler: ((URLResponse, Data)->Void)?
+    var completionHandler: (((URLResponse, Data))->Void)?
     var errorHandler: ((Error)->Void)?
     var cancelHandler: (()->Void)?
     

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_20"
+               BlueprintIdentifier = "SimpleDownloader::SimpleDownloader"
                BuildableName = "SimpleDownloader.framework"
                BlueprintName = "SimpleDownloader"
                ReferencedContainer = "container:SimpleDownloader.xcodeproj">
@@ -26,13 +26,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_29"
+               BlueprintIdentifier = "SimpleDownloader::SimpleDownloaderTests"
                BuildableName = "SimpleDownloaderTests.xctest"
                BlueprintName = "SimpleDownloaderTests"
                ReferencedContainer = "container:SimpleDownloader.xcodeproj">
@@ -46,6 +47,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -55,7 +57,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_20"
+            BlueprintIdentifier = "SimpleDownloader::SimpleDownloader"
             BuildableName = "SimpleDownloader.framework"
             BlueprintName = "SimpleDownloader"
             ReferencedContainer = "container:SimpleDownloader.xcodeproj">

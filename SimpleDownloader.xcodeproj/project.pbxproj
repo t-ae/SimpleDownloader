@@ -6,122 +6,136 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"SimpleDownloader::SimpleDownloaderPackageTests::ProductTarget" /* SimpleDownloaderPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_45 /* Build configuration list for PBXAggregateTarget "SimpleDownloaderPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_48 /* PBXTargetDependency */,
+			);
+			name = SimpleDownloaderPackageTests;
+			productName = SimpleDownloaderPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		OBJ_25 /* SimpleDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* SimpleDownloader.swift */; };
-		OBJ_26 /* SimpleRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* SimpleRequester.swift */; };
-		OBJ_27 /* URLSessionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* URLSessionWrapper.swift */; };
-		OBJ_34 /* SimpleDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SimpleDownloaderTests.swift */; };
-		OBJ_35 /* SimpleRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* SimpleRequesterTests.swift */; };
-		OBJ_37 /* SimpleDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* SimpleDownloader.framework */; };
+		OBJ_24 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_30 /* SimpleDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SimpleDownloaderTests.swift */; };
+		OBJ_31 /* SimpleRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SimpleRequesterTests.swift */; };
+		OBJ_33 /* SimpleDownloader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SimpleDownloader::SimpleDownloader::Product" /* SimpleDownloader.framework */; };
+		OBJ_40 /* SimpleDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* SimpleDownloader.swift */; };
+		OBJ_41 /* SimpleRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* SimpleRequester.swift */; };
+		OBJ_42 /* URLSessionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* URLSessionWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A79637181E79123400E1022B /* PBXContainerItemProxy */ = {
+		A7F73DFB1F8C8D7600182828 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = OBJ_20;
+			remoteGlobalIDString = "SimpleDownloader::SimpleDownloader";
 			remoteInfo = SimpleDownloader;
+		};
+		A7F73DFC1F8C8D7700182828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SimpleDownloader::SimpleDownloaderTests";
+			remoteInfo = SimpleDownloaderTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		OBJ_10 /* SimpleRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequester.swift; sourceTree = "<group>"; };
-		OBJ_11 /* URLSessionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWrapper.swift; sourceTree = "<group>"; };
-		OBJ_14 /* SimpleDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloaderTests.swift; sourceTree = "<group>"; };
-		OBJ_15 /* SimpleRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequesterTests.swift; sourceTree = "<group>"; };
-		OBJ_16 /* TestResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestResources; sourceTree = SOURCE_ROOT; };
-		OBJ_18 /* SimpleDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_19 /* SimpleDownloaderTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* URLSessionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWrapper.swift; sourceTree = "<group>"; };
+		OBJ_13 /* SimpleDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloaderTests.swift; sourceTree = "<group>"; };
+		OBJ_14 /* SimpleRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequesterTests.swift; sourceTree = "<group>"; };
+		OBJ_15 /* TestResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestResources; sourceTree = SOURCE_ROOT; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* SimpleDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloader.swift; sourceTree = "<group>"; };
+		OBJ_8 /* SimpleDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDownloader.swift; sourceTree = "<group>"; };
+		OBJ_9 /* SimpleRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequester.swift; sourceTree = "<group>"; };
+		"SimpleDownloader::SimpleDownloader::Product" /* SimpleDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SimpleDownloader::SimpleDownloaderTests::Product" /* SimpleDownloaderTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_28 /* Frameworks */ = {
+		OBJ_32 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_33 /* SimpleDownloader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_36 /* Frameworks */ = {
+		OBJ_43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_37 /* SimpleDownloader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_12 /* Tests */ = {
+		OBJ_11 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* SimpleDownloaderTests */,
+				OBJ_12 /* SimpleDownloaderTests */,
 			);
-			path = Tests;
-			sourceTree = "<group>";
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_13 /* SimpleDownloaderTests */ = {
+		OBJ_12 /* SimpleDownloaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_14 /* SimpleDownloaderTests.swift */,
-				OBJ_15 /* SimpleRequesterTests.swift */,
+				OBJ_13 /* SimpleDownloaderTests.swift */,
+				OBJ_14 /* SimpleRequesterTests.swift */,
 			);
 			name = SimpleDownloaderTests;
 			path = Tests/SimpleDownloaderTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* Products */ = {
+		OBJ_16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* SimpleDownloader.framework */,
-				OBJ_19 /* SimpleDownloaderTests.xctest */,
+				"SimpleDownloader::SimpleDownloaderTests::Product" /* SimpleDownloaderTests.xctest */,
+				"SimpleDownloader::SimpleDownloader::Product" /* SimpleDownloader.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_12 /* Tests */,
-				OBJ_16 /* TestResources */,
-				OBJ_17 /* Products */,
+				OBJ_11 /* Tests */,
+				OBJ_15 /* TestResources */,
+				OBJ_16 /* Products */,
 			);
+			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* SimpleDownloader */,
+				OBJ_8 /* SimpleDownloader.swift */,
+				OBJ_9 /* SimpleRequester.swift */,
+				OBJ_10 /* URLSessionWrapper.swift */,
 			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		OBJ_8 /* SimpleDownloader */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* SimpleDownloader.swift */,
-				OBJ_10 /* SimpleRequester.swift */,
-				OBJ_11 /* URLSessionWrapper.swift */,
-			);
-			name = SimpleDownloader;
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		OBJ_20 /* SimpleDownloader */ = {
+		"SimpleDownloader::SimpleDownloader" /* SimpleDownloader */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_21 /* Build configuration list for PBXNativeTarget "SimpleDownloader" */;
+			buildConfigurationList = OBJ_36 /* Build configuration list for PBXNativeTarget "SimpleDownloader" */;
 			buildPhases = (
-				OBJ_24 /* Sources */,
-				OBJ_28 /* Frameworks */,
+				OBJ_39 /* Sources */,
+				OBJ_43 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,25 +143,39 @@
 			);
 			name = SimpleDownloader;
 			productName = SimpleDownloader;
-			productReference = OBJ_18 /* SimpleDownloader.framework */;
+			productReference = "SimpleDownloader::SimpleDownloader::Product" /* SimpleDownloader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_29 /* SimpleDownloaderTests */ = {
+		"SimpleDownloader::SimpleDownloaderTests" /* SimpleDownloaderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_30 /* Build configuration list for PBXNativeTarget "SimpleDownloaderTests" */;
+			buildConfigurationList = OBJ_26 /* Build configuration list for PBXNativeTarget "SimpleDownloaderTests" */;
 			buildPhases = (
-				OBJ_33 /* Sources */,
-				OBJ_36 /* Frameworks */,
+				OBJ_29 /* Sources */,
+				OBJ_32 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_38 /* PBXTargetDependency */,
+				OBJ_34 /* PBXTargetDependency */,
 			);
 			name = SimpleDownloaderTests;
 			productName = SimpleDownloaderTests;
-			productReference = OBJ_19 /* SimpleDownloaderTests.xctest */;
+			productReference = "SimpleDownloader::SimpleDownloaderTests::Product" /* SimpleDownloaderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"SimpleDownloader::SwiftPMPackageDescription" /* SimpleDownloaderPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_20 /* Build configuration list for PBXNativeTarget "SimpleDownloaderPackageDescription" */;
+			buildPhases = (
+				OBJ_23 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleDownloaderPackageDescription;
+			productName = SimpleDownloaderPackageDescription;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -164,99 +192,126 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_17 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				OBJ_20 /* SimpleDownloader */,
-				OBJ_29 /* SimpleDownloaderTests */,
+				"SimpleDownloader::SwiftPMPackageDescription" /* SimpleDownloaderPackageDescription */,
+				"SimpleDownloader::SimpleDownloaderTests" /* SimpleDownloaderTests */,
+				"SimpleDownloader::SimpleDownloader" /* SimpleDownloader */,
+				"SimpleDownloader::SimpleDownloaderPackageTests::ProductTarget" /* SimpleDownloaderPackageTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_24 /* Sources */ = {
+		OBJ_23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_25 /* SimpleDownloader.swift in Sources */,
-				OBJ_26 /* SimpleRequester.swift in Sources */,
-				OBJ_27 /* URLSessionWrapper.swift in Sources */,
+				OBJ_24 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_33 /* Sources */ = {
+		OBJ_29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_34 /* SimpleDownloaderTests.swift in Sources */,
-				OBJ_35 /* SimpleRequesterTests.swift in Sources */,
+				OBJ_30 /* SimpleDownloaderTests.swift in Sources */,
+				OBJ_31 /* SimpleRequesterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_40 /* SimpleDownloader.swift in Sources */,
+				OBJ_41 /* SimpleRequester.swift in Sources */,
+				OBJ_42 /* URLSessionWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_38 /* PBXTargetDependency */ = {
+		OBJ_34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = OBJ_20 /* SimpleDownloader */;
-			targetProxy = A79637181E79123400E1022B /* PBXContainerItemProxy */;
+			target = "SimpleDownloader::SimpleDownloader" /* SimpleDownloader */;
+			targetProxy = A7F73DFB1F8C8D7600182828 /* PBXContainerItemProxy */;
+		};
+		OBJ_48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SimpleDownloader::SimpleDownloaderTests" /* SimpleDownloaderTests */;
+			targetProxy = A7F73DFC1F8C8D7700182828 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_22 /* Debug */ = {
+		OBJ_21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloader_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SimpleDownloader;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = SimpleDownloader;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		OBJ_23 /* Release */ = {
+		OBJ_22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_TESTABILITY = YES;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloader_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloaderTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SimpleDownloader;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGET_NAME = SimpleDownloader;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SimpleDownloaderTests;
+			};
+			name = Debug;
+		};
+		OBJ_28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloaderTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SimpleDownloaderTests;
 			};
 			name = Release;
 		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = YES;
@@ -266,53 +321,65 @@
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		OBJ_31 /* Debug */ = {
+		OBJ_37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloaderTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloader_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				TARGET_NAME = SimpleDownloaderTests;
+				PRODUCT_BUNDLE_IDENTIFIER = SimpleDownloader;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SimpleDownloader;
 			};
 			name = Debug;
 		};
-		OBJ_32 /* Release */ = {
+		OBJ_38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloaderTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				INFOPLIST_FILE = SimpleDownloader.xcodeproj/SimpleDownloader_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				TARGET_NAME = SimpleDownloaderTests;
+				PRODUCT_BUNDLE_IDENTIFIER = SimpleDownloader;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SimpleDownloader;
 			};
 			name = Release;
 		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -320,11 +387,23 @@
 				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 			};
 			name = Release;
 		};
@@ -340,20 +419,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_21 /* Build configuration list for PBXNativeTarget "SimpleDownloader" */ = {
+		OBJ_20 /* Build configuration list for PBXNativeTarget "SimpleDownloaderPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_22 /* Debug */,
-				OBJ_23 /* Release */,
+				OBJ_21 /* Debug */,
+				OBJ_22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_30 /* Build configuration list for PBXNativeTarget "SimpleDownloaderTests" */ = {
+		OBJ_26 /* Build configuration list for PBXNativeTarget "SimpleDownloaderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_31 /* Debug */,
-				OBJ_32 /* Release */,
+				OBJ_27 /* Debug */,
+				OBJ_28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_36 /* Build configuration list for PBXNativeTarget "SimpleDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_37 /* Debug */,
+				OBJ_38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_45 /* Build configuration list for PBXAggregateTarget "SimpleDownloaderPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_46 /* Debug */,
+				OBJ_47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
