@@ -49,14 +49,17 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
             return
         }
         
-        DispatchQueue.main.async {
-            do {
-                try FileManager.default.moveItem(at: location, to: self.destination)
+        do {
+            try FileManager.default.moveItem(at: location, to: self.destination)
+            DispatchQueue.main.async {
                 self.completionHandler?(self.destination)
-            } catch(let e) {
-                self.errorHandler?(e)
+                self.session.finishTasksAndInvalidate()
             }
-            self.session.finishTasksAndInvalidate()
+        } catch(let e) {
+            DispatchQueue.main.async {
+                self.errorHandler?(e)
+                self.session.finishTasksAndInvalidate()
+            }
         }
     }
     

@@ -18,8 +18,8 @@ class SimpleDownloaderTests: XCTestCase {
         
         downloader.onComplete { (location:URL)->Void in
             print(location)
-            ex.fulfill()
             try! FileManager.default.removeItem(at: location)
+            ex.fulfill()
         }
         downloader.onCompleteWithError { e in
             print(e)
