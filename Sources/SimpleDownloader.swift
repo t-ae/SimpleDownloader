@@ -50,6 +50,9 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
         }
         
         do {
+            if FileManager.default.fileExists(atPath: self.destination.path) {
+                try FileManager.default.removeItem(at: self.destination)
+            }
             try FileManager.default.moveItem(at: location, to: self.destination)
             DispatchQueue.main.async {
                 self.completionHandler?(self.destination)
