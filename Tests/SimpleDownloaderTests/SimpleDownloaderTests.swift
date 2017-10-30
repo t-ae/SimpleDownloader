@@ -37,11 +37,17 @@ class SimpleDownloaderTests: XCTestCase {
         }
         
         let downloader = SimpleDownloader(url: URL(string: url)!, destination: dest)
+        downloader.onCompleteWithError { e in
+            print("error: \(e)")
+        }
         downloader.onCancel {
+            print("canceled")
             ex.fulfill()
         }
+        downloader.onComplete { result in print(result) }
+        downloader.onProgress { p in print(p) }
         downloader.start()
-        let deadline = DispatchTime.now() + 3
+        let deadline = DispatchTime.now() + 0.0001
         DispatchQueue.main.asyncAfter(deadline: deadline) {
             downloader.cancel()
         }

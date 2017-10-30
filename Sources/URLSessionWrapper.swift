@@ -37,6 +37,5 @@ extension URLSessionWrapper {
     
     public func cancel() {
         task.cancel()
-        cancelHandler?()
     }
 }

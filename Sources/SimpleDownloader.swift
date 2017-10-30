@@ -70,11 +70,16 @@ extension SimpleDownloader : URLSessionDownloadDelegate {
                            task: URLSessionTask,
                            didCompleteWithError error: Error?) {
         
-        if let error = error {
-            DispatchQueue.main.async {
+        guard let error = error else {
+            return
+        }
+        DispatchQueue.main.async {
+            if (error as NSError).code == NSURLErrorCancelled {
+                self.cancelHandler?()
+            } else {
                 self.errorHandler?(error)
-                self.session.finishTasksAndInvalidate()
             }
+            self.session.finishTasksAndInvalidate()
         }
     }
     
