@@ -1,7 +1,6 @@
-
 import Foundation
 
-public enum HttpMethod: String {
+public enum HTTPMethod: String {
     case get = "GET", post = "POST", head = "HEAD"
 }
 
@@ -17,7 +16,7 @@ public class SimpleRequester: NSObject, URLSessionWrapper {
     var session: URLSession!
     var task: URLSessionTask!
     
-    public init(method: HttpMethod, url: URL,
+    public init(method: HTTPMethod, url: URL,
                 headers: [String:String] = [:],
                 parameters: [String:String] = [:],
                 config: URLSessionConfiguration = URLSessionConfiguration.default) {
