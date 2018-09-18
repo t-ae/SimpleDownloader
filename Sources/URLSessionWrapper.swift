@@ -1,16 +1,13 @@
 import Foundation
 
-internal protocol URLSessionWrapper : class {
+public class URLSessionWrapper<ResultType>: NSObject {
+    var progressHandler: ((Double)->Void)?
+    var completionHandler: ((ResultType)->Void)?
+    var errorHandler: ((Error)->Void)?
+    var cancelHandler: (()->Void)?
     
-    associatedtype ResultType
-    
-    var progressHandler: ((Double)->Void)? { get set }
-    var completionHandler: ((ResultType)->Void)? { get set }
-    var errorHandler: ((Error)->Void)? { get set }
-    var cancelHandler: (()->Void)? { get set }
-    
-    var session: URLSession! { get set }
-    var task: URLSessionTask! { get set }
+    var session: URLSession!
+    var task: URLSessionTask!
 }
 
 extension URLSessionWrapper {
@@ -19,7 +16,7 @@ extension URLSessionWrapper {
         progressHandler = handler
     }
     
-    public func onComplete(_ handler: @escaping (Self.ResultType)->Void) {
+    public func onComplete(_ handler: @escaping (ResultType)->Void) {
         precondition(completionHandler == nil, "`completionHandler` is already set.")
         completionHandler = handler
     }

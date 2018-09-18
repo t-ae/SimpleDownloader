@@ -1,18 +1,8 @@
 import Foundation
 
-public class SimpleDownloader: NSObject, URLSessionWrapper {
-    
-    public typealias ResultType = URL
-    
+public class SimpleDownloader: URLSessionWrapper<URL>, URLSessionDownloadDelegate {
+
     let destination: URL
-    
-    var progressHandler: ((Double)->Void)?
-    var completionHandler: ((URL)->Void)?
-    var errorHandler: ((Error)->Void)?
-    var cancelHandler: (()->Void)?
-    
-    var session: URLSession!
-    var task: URLSessionTask!
     
     public init(url: URL,
                 destination: URL,
@@ -31,9 +21,7 @@ public class SimpleDownloader: NSObject, URLSessionWrapper {
         }
         task = session.downloadTask(with: request)
     }
-}
-
-extension SimpleDownloader : URLSessionDownloadDelegate {
+    
     
     public func urlSession(_ session: URLSession,
                            downloadTask: URLSessionDownloadTask,

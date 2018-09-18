@@ -4,17 +4,7 @@ public enum HTTPMethod: String {
     case get = "GET", post = "POST", head = "HEAD"
 }
 
-public class SimpleRequester: NSObject, URLSessionWrapper {
-
-    public typealias ResultType = (URLResponse, Data)
-    
-    var progressHandler: ((Double)->Void)?
-    var completionHandler: (((URLResponse, Data))->Void)?
-    var errorHandler: ((Error)->Void)?
-    var cancelHandler: (()->Void)?
-    
-    var session: URLSession!
-    var task: URLSessionTask!
+public class SimpleRequester: URLSessionWrapper<(URLResponse, Data)> {
     
     public init(method: HTTPMethod, url: URL,
                 headers: [String:String] = [:],

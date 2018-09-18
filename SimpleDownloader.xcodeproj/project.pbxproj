@@ -183,6 +183,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"SimpleDownloader::SimpleDownloader" = {
+						LastSwiftMigration = 1000;
+					};
+					"SimpleDownloader::SimpleDownloaderTests" = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SimpleDownloader" */;
 			compatibilityVersion = "Xcode 3.2";
